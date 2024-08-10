@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<div class="main">
+    <h1>Showing Search Results...</h1>
+    <div class="book-list">
+        <% if(locals.data.length) {%>
+            <% locals.data.forEach(item => { %>
+                <div class="book-item">
+                    <img src="<%=item.coverUrl%>" alt="Book Cover Image">
+                    <div class="book-info book-display">
+                        <h1><a href="/view?title=<%=item.title%>&author=<%=item.author%>&coverUrl=<%=item.coverUrl%>"><%=item.title%></a></h1>
+                        <h2><span>By:</span>&nbsp;<%=item.author%></h2>
+                    </div>
+                </div>
+                <hr>
+                
+            <%});%>
+    
+        <%} else {%>
+            <h1>Are you sure you have searched correctly?</h1>
+        <%}%>
+    </div>
+
+</div>
+
+
+<%- include("partials/footer.ejs") %>

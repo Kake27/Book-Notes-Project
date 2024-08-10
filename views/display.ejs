@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+
+<div class="book-list">
+    <div class="book-item">
+        <img src="<%=book_info.cover_url%>" alt="Image not available">
+        <div class="book-info">
+            <h1><%=book_info.title%></a></h1>
+            <h2><span>By:</span>&nbsp;<%=book_info.author%></h2>
+            <h4><span>Reviewed on:</span>&nbsp;<%=review_info.review_date%></h4>
+            <% if(review_info.review.length > 400) {%>
+                <p><%=review_info.review.substring(0, 400)%>...</p>
+            <%} else {%>
+                <p><%=review_info.review%></p>
+            <%}%>
+            
+            <h4 style="text-align: left;"><span>Rating:</span>&nbsp;<%=review_info.rating%>/10</h4>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <a href="/edit/<%=book_info.book_id%>"><button>Edit</button></a>
+        <a href="/delete/<%=book_info.book_id%>"><button style="background-color: rgb(214, 43, 43);">Delete</button></a>
+    </div>
+
+    
+</div>
+
+<%- include("partials/footer.ejs") %>

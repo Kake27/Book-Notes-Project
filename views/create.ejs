@@ -1,0 +1,102 @@
+<%- include("partials/header.ejs") %>
+
+<div class="add-book">
+    <% if(locals.book_info) { %>
+        <h1>Update your book entry here</h1>
+        <form method="POST" action="/update">
+            <div class="book-title">
+                <label for="title-label">Book Title: </label>
+                <input type="text" name="title" value="<%=book_info.title%>" ><br>
+            </div>
+            <div class="book-author">
+                <label for="book-author">Author Name: </label>
+                <input type="text" name="author" value="<%=book_info.author%>" ><br>
+            </div>
+
+            <div class="book-review">
+                <label for="content-label">Book Review: </label><br>
+                <textarea type="text" name="review" ><%=review_info.review%></textarea>
+            </div>
+
+            <div class="book-cover">
+                <label for="book-cover">Cover URL (Optional): </label>
+                <input type="text" name="coverUrl" value="<%=book_info.cover_url%>"><br>
+            </div>
+
+            <div class="book-rating">
+                <label for="book-rating">Rating:</label>
+                <input type="number" max="10" min="0" style="background-color: #1F2833;" name="rating" value="<%=review_info.rating%>">
+                <label style="color: #C5C6C7;">/10</label>
+            </div>
+
+            <input type="text" value="<%=book_info.book_id%>" name="id" hidden >
+            <button>Update Review</button>
+        </form>
+    
+    <% } else if(locals.book_data) {%>
+        <form method="POST" action="/save">
+            <div class="book-title">
+                <label for="title-label">Book Title: </label>
+                <input type="text" name="title" value="<%=book_data.title%>"required><br>
+            </div>
+            <div class="book-author">
+                <label for="book-author">Author Name: </label>
+                <input type="text" name="author" value="<%=book_data.author%>"><br>
+            </div>
+
+            <div class="book-review">
+                <label for="content-label">Book Review: </label><br>
+                <textarea type="text" name="review"></textarea>
+            </div>
+
+            <div class="book-cover">
+                <label for="book-cover">Cover URL (Optional): </label>
+                <input type="text" name="coverUrl" value="<%=book_data.coverUrl%>"><br>
+            </div>
+
+            <div class="book-rating">
+                <label for="book-rating">Rating:</label>
+                <input type="number" max="10" min="0" style="background-color: #1F2833;" name="rating">
+                <label style="color: #C5C6C7;">/10</label>
+            </div>
+
+            <button>Add Review</button>
+        </form>
+    
+    <%} else {%>
+        <h1>Add your custom book entry here</h1>
+
+        <form method="POST" action="/save">
+            <div class="book-title">
+                <label for="title-label">Book Title: </label>
+                <input type="text" name="title" required><br>
+            </div>
+            <div class="book-author">
+                <label for="book-author">Author Name: </label>
+                <input type="text" name="author" ><br>
+            </div>
+
+            <div class="book-review">
+                <label for="content-label">Book Review: </label><br>
+                <textarea type="text" name="review"></textarea>
+            </div>
+
+            <div class="book-cover">
+                <label for="book-cover">Cover URL (Optional): </label>
+                <input type="text" name="coverUrl"><br>
+            </div>
+
+            <div class="book-rating">
+                <label for="book-rating">Rating:</label>
+                <input type="number" max="10" min="0" style="background-color: #1F2833;" name="rating">
+                <label style="color: #C5C6C7;">/10</label>
+            </div>
+
+            <button>Add Review</button>
+        </form>
+    <%}%>
+
+        
+</div>
+
+<%- include("partials/footer.ejs") %>

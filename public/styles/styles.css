@@ -1,0 +1,331 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #0B0C10;
+    color: #66FCF1;
+}
+
+a {
+    text-decoration: none;
+    color: #66FCF1;
+}
+
+a:hover {
+    color: #52c0ba;
+}
+
+hr {
+    width: 75%;
+    color: #C5C6C7;
+}
+
+.header {
+    display: flex;
+    color: #66FCF1;
+    height: 6rem;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 300;
+}
+
+.header h1 {
+    font-size: 2rem;
+}
+
+.header h2 {
+    margin-right: 3rem;
+    font-family: "Roboto Mono";
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title svg {
+    margin: 15px;
+}
+.title h1 {
+    color: #C5C6C7;
+}
+
+.header form {
+    display: flex;
+    gap: 10px;
+}
+
+.header form input {
+    height: 1.8rem;
+    width: 15rem;
+    background-color: #C5C6C7;
+    border: none;
+    border-radius: 20px;
+    margin: auto;
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: large;
+    
+}
+
+.header form button {
+    background: none;
+    border: none;
+    padding: none;
+    border-radius: 50%;
+}
+
+.header form button:hover {
+    cursor: pointer;
+    background-color: #C5C6C7;
+}
+
+.main {
+    min-height: 70vh;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.create-button {
+    height: 2.2rem;
+    width: 13rem;
+    font-size: larger;
+    border: 2px solid #45A29E;
+    background-color: #1F2833;
+    border-radius: 20px;
+}
+
+.create-button a {
+    color: #C5C6C7;
+}
+
+.create-button:hover {
+    cursor: pointer;
+    background-color: #12181e;
+}
+
+.book-list {
+    background-color: #1F2833;
+    border: 1px solid #45A29E;
+    width: 75%;
+    margin: auto;
+    height: min-content;
+    margin-top: 3rem;
+    border-radius: 30px;
+    overflow:hidden;
+}
+
+.add-book{
+    text-align: center;
+    min-height: 75vh;
+    font-family: "Roboto", monospace;
+    margin-bottom: 3rem;
+}
+
+.add-book form{
+    text-align: center;
+    background-color: #1F2833;
+    border: 1px solid #45A29E;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 60%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 35px;
+    font-size: 1.25rem;
+
+    color: #66FCF1;
+}
+
+.book-title input {
+    width: 20rem;
+}
+
+.add-book h1 {
+    color: aliceblue;
+}
+
+.add-book form div {
+    margin: 2.5rem;
+}
+
+.add-book form div input {
+    background-color: #C5C6C7;
+    height: 1.5rem;
+    font-size: large;
+    border-radius: 30px;
+    border: #66FCF1;
+}
+
+.add-book form button {
+    height: 2.5rem;
+    width: 10rem;
+    background-color: #12181e;
+    color: #C5C6C7;
+    border-radius: 20px;
+    border: 1px solid aliceblue;
+    font-size: large;
+}
+
+.add-book form button:hover {
+    background-color: #0B0C10;
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+    border-radius: 20px;
+    width: 75%;
+    height: 20rem;
+    background-color: #C5C6C7;
+    font-size: large;
+}
+
+.book-rating input{
+    width: 2.2rem;
+    color: white;
+}
+
+.book-list h1 {
+    font-family: "Dosis", sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    color: whitesmoke;
+}
+
+.book-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.book-item img{
+    width: 200px;
+    max-height: 300px;
+    border: 2px solid #0B0C10;
+    float: left;
+
+}
+.book-info {
+    width: 80%;
+    padding-left: 2rem;
+    font-family: "Roboto", monospace;
+    color: #dedfe0;
+    text-align: center;
+    float: left;
+}
+
+.book-info h1 a {
+    color: whitesmoke;
+}
+
+.book-info h1 a:hover {
+    color: #6af2eb;
+}
+
+.book-info span {
+    color: #66FCF1;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    gap: 20px;
+}
+
+.buttons button {
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 20px;
+    background-color: #12181e;
+    color: #dedfe0;
+    border: 1px solid #66FCF1;
+    font-size: large;
+}
+
+.buttons button:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+.book-display {
+    padding: 0;
+    width: 60%;
+    text-align: center;
+
+}
+
+.main h1 {
+    font-family: "Dosis", sans-serif;
+}
+
+.sort {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: "Roboto Mono", monospace;
+    color: #dedfe0;
+}
+
+#sort-option {
+    height: 1.5rem;
+    width: 6rem;
+    font-family: "Dosis", sans-serif;
+    border-radius: 10px;
+    border: 1px solid #66FCF1;
+    background-color: #1F2833;
+    color: #C5C6C7;
+}
+
+#sort-button {
+    height: 1.5rem;
+    width: 2rem;
+    font-family: "Roboto Mono", monospace;
+    background-color: #0B0C10;
+    border: none;
+    color: #dedfe0;
+    border-radius: 50%;
+}
+
+#sort-button:hover {
+    cursor: pointer;
+    background-color: #1F2833;
+}
+
+
+
+
+footer {
+    background-color: #0B0C10;
+    color: #66FCF1;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 100;
+}
+
+@media (max-width: 650px) {
+    .book-item {
+        display: block;
+        text-align: center;
+    }
+    .book-item img {
+        float: none;
+    }
+}
+
+@media (max-width: 610px) {
+    .title h1 {
+        display: none;
+    }
+}
