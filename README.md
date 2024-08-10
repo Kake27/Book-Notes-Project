@@ -1,0 +1,1 @@
+A website which allows you to store summaries / take-aways from any book which you may have read. The book covers can be fetched automatically using the OpenLibrary Book Cover API or the links to them can also be entered manually.
